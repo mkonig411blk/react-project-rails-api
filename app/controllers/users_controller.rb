@@ -4,12 +4,12 @@ class UsersController < ApplicationController
     end
 
     def create
-        user = User.find_or_create_by(email: params[:email])
+        user = User.find_or_create_by(name: params[:name])
         user.name = params[:name]
         if user.save
             render json: user, except: [:created_at, :updated_at]
         else
-            render json: {message: "Signup Failed"}
+            render json: {message: "Login Failed"}
         end
     end
 
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 
 private
     def user_params
-      params.require(:user).permit(:email)
+      params.require(:user).permit(:name)
     end
 
 end
