@@ -5,7 +5,6 @@ class UsersController < ApplicationController
 
     def create
         user = User.find_or_create_by(name: params[:name])
-        user.name = params[:name]
         if user.save
             render json: user, except: [:created_at, :updated_at]
         else
@@ -20,6 +19,11 @@ class UsersController < ApplicationController
         else
             render json: {message: "User not found."}
         end
+    end
+
+    def index
+        users = User.all
+        render json: users, include: [:reviews], except: [:created_at, :updated_at]
     end
 
 private

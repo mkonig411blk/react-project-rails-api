@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :gifts do
     resources :reviews
   end
-  resources :users, only: [:create, :show]
+  resources :users
 end
