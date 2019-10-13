@@ -10,12 +10,16 @@ class ReviewsController < ApplicationController
 
     def create
         review = Review.new(review_params)
-        review.save!
         if review.save
             render json: review, include: [:user, :gift],  except: [:created_at, :updated_at]
         else
             render json: {message: "Review not saved."}
         end
+    end
+
+    def destroy
+        review = Review.find_by(id: params[:id])
+        review.destroy
     end
 
     private

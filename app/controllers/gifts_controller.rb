@@ -1,7 +1,7 @@
 class GiftsController < ApplicationController
     def index
         gifts = Gift.all
-        render json: gifts, include: [:reviews], except: [:created_at, :updated_at]
+        render json: gifts, include: [:reviews, :users], except: [:created_at, :updated_at]
     end
 
     # def show
