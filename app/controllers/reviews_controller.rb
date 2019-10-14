@@ -17,10 +17,18 @@ class ReviewsController < ApplicationController
         end
     end
 
+    # def show
+    #     gift = Gift.find_by(id: params[:id])
+    #     if gift
+    #         render json: gifts, except: [:created_at, :updated_at]
+    #     else
+    #         render json: {message: "Gift not found."}
+    #     end
+    # end
+
     def destroy
         review = Review.find_by(id: params[:reviewId])
-        review.delete
-        render json: {message: "Review removed.", status: 200}
+        review.destroy
     end
 
 
