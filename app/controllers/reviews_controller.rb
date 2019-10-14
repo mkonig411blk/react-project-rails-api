@@ -18,9 +18,11 @@ class ReviewsController < ApplicationController
     end
 
     def destroy
-        review = Review.find_by(id: params[:id])
-        review.destroy
+        review = Review.find_by(id: params[:reviewId])
+        review.delete
+        render json: {message: "Review removed.", status: 200}
     end
+
 
     private
         def review_params
