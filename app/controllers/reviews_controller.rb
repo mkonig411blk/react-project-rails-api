@@ -28,7 +28,6 @@ class ReviewsController < ApplicationController
 
     def destroy
         review = Review.find_by(id: params[:reviewId])
-        # byebug
         review.delete
     end
 
