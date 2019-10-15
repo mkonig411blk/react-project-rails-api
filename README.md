@@ -1,24 +1,23 @@
-# README
+# React Redux Portfolio Project: Gift Finder 2.0 (Backend)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# DESCRIPTION
 
-Things you may want to cover:
+"Gift Finder 2.0" has a React Redux frontend and a Rails API backend. It allows you to view clever gift ideas and view or write comments on each gift. All gifts include information on price, category, and links to where you can shop the item.
 
-* Ruby version
+# INSTRUCTIONS
 
-* System dependencies
+1. Run 'bundle install' to install required dependencies
+2. Run 'rails db:migrate' and 'rails db:seed' to create the 3 database tables & seed gift data
+3. Run 'rails s' to start the rails server
+4. Open the application frontend (https://github.com/mkonig411blk/react-project-front-end) and follow its README instructions
+5. Begin by signing up with a new username or logging in with an existing username
+6. See a list of gift ideas and comment on any gifts
 
-* Configuration
+# CONTRIBUTING
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-* Database creation
+# LICENSE
+The gem is available as open source under the terms of the MIT License.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# AUTHOR
+Margot Konig
